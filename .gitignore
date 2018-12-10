@@ -1,0 +1,6 @@
+# Build system files
+/.idea
+/packages
+/bin/
+/obj/
+*DotSettings.user
