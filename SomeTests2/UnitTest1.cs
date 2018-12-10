@@ -16,14 +16,14 @@ namespace Tests
         [TestCaseSource(nameof(TestCases))]
         public void Test1(int val)
         {
-            Assert.Less(val, 1000);
+            Assert.Less(val, 1000000);
         }
 
         private static IEnumerable<int> TestCases
         {
             get
             {
-                for (int i = 0; i < 1000000; i++)
+                for (int i = 0; i < 1000; i++)
                     yield return i;
             }
         }
