@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+
 using NUnit.Framework;
 
 namespace Tests
@@ -10,9 +13,19 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
+        [TestCaseSource(nameof(TestCases))]
+        public void Test1(int val)
         {
-            Assert.Pass();
+            Assert.Less(val, 1000000);
+        }
+
+        private static IEnumerable<int> TestCases
+        {
+            get
+            {
+                for (int i = 0; i < 1000000; i++)
+                    yield return i;
+            }
         }
     }
 }
