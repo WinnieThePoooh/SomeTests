@@ -3,4 +3,6 @@
 /packages
 /bin/
 /obj/
+/SomeTests2/obj/
+/SomeTests2/bin/
 *DotSettings.user
