@@ -16,7 +16,7 @@ namespace Tests
         [TestCaseSource(nameof(TestCases))]
         public void Test1(int val)
         {
-            Assert.Less(val, 1000000);
+            Assert.Less(val, 1000);
         }
 
         private static IEnumerable<int> TestCases
